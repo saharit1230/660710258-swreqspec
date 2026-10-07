@@ -26,7 +26,7 @@ def create_booking(db: Session, hn: str, slot_id: int) -> Booking:
     if slot.remaining < 0:
         raise SlotFullError(slot_id)
 
-    slot.remaining -= 1
+    #slot.remaining -= 1
     booking = Booking(
         hn=hn,
         slot_id=slot.id,
